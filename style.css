@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    #b4bb2d,
+    #babe55,
+    #c0c276,
+    #c4c596,
+    #c8c8b4
+  );
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+  height: 650px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5% 1%;
+}
+
+.cart {
+  height: 25%;
+  width: 32%;
+  background-image: radial-gradient(
+    circle,
+    #5b5e1e,
+    #4c4f20,
+    #3e3f21,
+    #303120,
+    #23231f
+  );
+
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 500ms;
+  transform: rotateY(-180deg);
+  z-index: 2;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+img {
+  height: 50%;
+  max-width: 70%;
+  transform: translateZ(5px);
+  filter: drop-shadow(0 0 3px #fff);
+  -webkit-filter: drop-shadow(0 0 3px #fff);
+}
+
+a {
+  text-decoration: none;
+  color: #4c4f20;
+  margin-top: 50px;
+}
