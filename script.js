@@ -61,21 +61,21 @@ for (let i = 0; i < ruleNumber * 2; i++) {
             return;
           }
         } else {
-          /** if cards was not equal click gonna be false */
-          card.setAttribute("data-click", false);
-          document
-            .querySelectorAll(`[data-id='${card_1}']`)
-            ?.forEach((item) => {
-              item.setAttribute("data-click", false);
-            });
           /** if the cards are equal after 1 sec they rotate   */
           setTimeout(() => {
             document.querySelectorAll(".hide").forEach((item) => {
               item.style.transform = "rotateY(-180deg)";
+              /** if cards was not equal click gonna be false */
+              document
+                .querySelectorAll(`[data-id='${card_1}']`)
+                ?.forEach((item) => {
+                  item.setAttribute("data-click", false);
+                });
+              card.setAttribute("data-click", false);
+              card_1 = "";
             });
           }, 1000);
         }
-        card_1 = "";
       } else {
         /** if its the first card to be clicked  */
         card_1 = card.dataset.id;
